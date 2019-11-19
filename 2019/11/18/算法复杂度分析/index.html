@@ -154,7 +154,7 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>接着以上套路，这段程序第一行执行了1单位时间，第三行执行了 $n$ 次 (除去 for 循环初始条件 int i = 0 执行了 1 单位时间)，需要 $n$ 个单位时间。第四和第五行分别执行了 ${n^2}$ 次 (除去 for 循环初始条件 int j = 0 执行了 $n$ 个单位时间)，所以需要 $2n^2$ 个单位时间。总共计算下来，总执行时间为 $T(n) = (2n^2 + 2n + 2) * 单位时间$ 。</p>
+<p>接着以上套路，这段程序第二行执行了1单位时间，第三行执行了 $n$ 次 (除去 for 循环初始条件 int i = 0 执行了 1 单位时间)，需要 $n$ 个单位时间。第四和第五行分别执行了 ${n^2}$ 次 (除去 for 循环初始条件 int j = 0 执行了 $n$ 个单位时间)，所以需要 $2n^2$ 个单位时间。总共计算下来，总执行时间为 $T(n) = (2n^2 + 2n + 2) * 单位时间$ 。</p>
 <p>接下来，就是怎么使用大 O 表示法。大 O 的公式如下:<br>$$<br>T(n) = O (f(n))<br>$$<br>T(n) 表示代码执行时间，n 表示数据规模，f(n) 表示每行代码执行的次数总和，而 O 则表示代码的执行时间 T(n) 与 f(n) 成正比。</p>
 <p>大 O 表示法可将以上两个例子的时间复杂度的写法简化为 $T(n) = O(n)$ &amp; $T(n) = O(n^2)$ 。</p>
 <h3 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h3><p>使用大 O 表示时间复杂度有以下几个诀窍:</p>
@@ -177,7 +177,7 @@
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> total1 <span class="token operator">+</span> total2<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>这段代码的复杂度最终用大 O 表示法为:  $O(n)$ 。</p>
+<p>这段代码的复杂度最终用大 O 表示法为:  $O(n^2)$ 。</p>
 </li>
 <li><p>乘法法则: 嵌套代码的复杂度等于嵌套内外代码的乘积。</p>
 <p>Example</p>
