@@ -143,7 +143,7 @@
             <div class="typo" style="padding: 3rem;">
                 <h1 id="批量写接口设计"><a href="#批量写接口设计" class="headerlink" title="批量写接口设计"></a>批量写接口设计</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><p>IoTDB原先的写入接口为基于单个时间戳构建单个TSRecord并写入，此方法的优点在于可以支持非对齐的数据写入，但因为底层存储方式的问题，这将会限制用户在写入大量对齐数据时的效率。</p>
 <h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>本功能的开发意图: 用户写入数据时，能够基于列(传感器 sensor)批量写入多行数据，而非基于时间戳一次写入一行数据。</p>
-<p>![](C:\Users\Jack\Documents\My Documents\IoTDB\RowBatch.png)</p>
+<p><img src="https://i.imgur.com/oET3ZBU.png" alt></p>
 <h2 id="功能设计"><a href="#功能设计" class="headerlink" title="功能设计"></a>功能设计</h2><h3 id="需求说明"><a href="#需求说明" class="headerlink" title="需求说明"></a>需求说明</h3><p>根据用户指定的数据量，将数据批量(多行)写入指定的传感器中。</p>
 <h3 id="用户操作方式"><a href="#用户操作方式" class="headerlink" title="用户操作方式"></a>用户操作方式</h3><ol>
 <li><p>新建一个 TSFileWriter，并将所需的 schema 整理成一数组，向 TsFileWriter 注册。示例如下:</p>
@@ -205,7 +205,7 @@ RowBatch rowBatch <span class="token operator">=</span> fileSchema<span class="t
 <p>在批量写接口中，面向的是写入对齐的数据，因此调整了存储方案，更改为按列(传感器)存储。这将使用整型数组作为构造数据的主要数据结构，因为对单个传感器传入数据时，数据类型是固定的，且整型数组对空间和写入效率上相对比较友好。</p>
 </li>
 <li><p>RowBatch 类设计</p>
-<p>![](C:\Users\Jack\Documents\My Documents\IoTDB\RowBatch (UML).png)</p>
+<p><img src="https://i.imgur.com/B2l8HCE.png" alt></p>
 </li>
 </ol>
 
