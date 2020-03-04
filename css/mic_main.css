@@ -1277,6 +1277,7 @@
 			color: #333;
 			border-bottom:none;
 			border-bottom-color: rgba(255, 255, 255, 0.5);
+			font-weight: 400;
 		}
 
 			#nav a:hover {
