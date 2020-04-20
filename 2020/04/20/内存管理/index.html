@@ -62,25 +62,24 @@
 	
 <link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
-		<body class="is-loading">
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
     <!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in overlay">
+    <div id="wrapper" class="fade-in">
         <!-- Intro 头部显示 s -->
-                <div id="intro">
-            <h1>This is<br>
-                        Jack</h1>
-            <p> Think big <br> Start small, grow fast
-            </p>
-            <ul class="actions">
-                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
-        </div>
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
     <a href="/" class="logo">JACK</a>
 </header>
-        <!-- Header 头部logo end -->
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special">
             <ul class="menu links">
@@ -146,54 +145,101 @@
 				translateInitilization();
 			</script>
 </nav>
-        <!-- Nav 导航条 end -->
-        <!-- Main 主要部分 start -->
-        
-        <!-- 文章列表   s -->
-        <div id="main" style="background-color: transparent; padding:0;">
-        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
-            <div class="link_row">
-                <!-- 文章sample  s-->
 
-                
-                <div class="6u 12u(narrower)">
-                    <section class="link_box special">
-                       <a href="/2020/04/20/内存管理/">
-                        <div class="page_title" style="background-image: url(https://i.imgur.com/YFDq3rc.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
-                            <!--标题-->
-                            <h2 class="page_title_text"> 内存管理 </h2>
-                            <!--段落-->
-                        </div>
-                        </a>
-                        <div class="home-post-info">
-                            <!-- Author Avatar -->
-                            <div class="home-post-info-author-avatar">
-                                <h6><span class="home-post-info-data">2020-04-20</span></h6>
-                                <div class="home-post-info-Category">
-                                    <!-- Category -->
-                                    <span>
-                            <h6>
-                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/">
-                                <a class="post_category-link" href="/categories/Operating-System/">Operating System</a></a>
-                            </h6>
-                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- 文章sample  e-->
-            
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://i.imgur.com/YFDq3rc.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>内存管理</h2></a>
             </div>
-        </section>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><h2 id="地址空间"><a href="#地址空间" class="headerlink" title="地址空间"></a>地址空间</h2><ul>
+<li><p>抽象的内存，可用于寻址内存的地址集合</p>
+</li>
+<li><p>每个进程都有自己的地址空间，并且独立于其他进程的地址空间</p>
+</li>
+<li><p>地址动态重定位</p>
+<ul>
+<li>基址寄存器与界限寄存器</li>
+<li>每个内存地址在送到内存之前，都会自动先加上基址寄存器的内容</li>
+</ul>
+</li>
+<li><p>内存超载</p>
+<ul>
+<li><p>交换技术</p>
+<ul>
+<li>把一个进程完整调入内存，使该进程运行一段间，然后把它存回磁盘，以释放内存</li>
+</ul>
+</li>
+<li><p>虚拟内存</p>
+<ul>
+<li>使程序在只有一部份被调入内存的情况下运行</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>空闲内存管理</p>
+<ul>
+<li>位图</li>
+<li>空闲区链表</li>
+</ul>
+</li>
+</ul>
+<h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><ul>
+<li><p>每个程序都有自己的地址空间，这个空间被分割成多个块，每个块称作页或页面 (page)，有连续地址范围</p>
+</li>
+<li><p>本质上是用来创造一个地址空间，是对物理内存的抽象 (类似进程是对 CPU 的抽象)</p>
+</li>
+<li><p>虚拟内存的实现，是将虚拟地址空间分解成页，并将每一页映射到物理内存的某个页匡或者解除映射</p>
+</li>
+<li><p>部份页被映射到物理内存</p>
+<ul>
+<li>程序引用到在物理内存中的地址空间，由硬件立刻执行必要的映射</li>
+<li>程序引用到不在物理内存中的地址空间，由操作系统负责将缺失的部份装入物理内存并重新执行</li>
+</ul>
+</li>
+<li><p>页表</p>
+<ul>
+<li><p>虚拟地址到物理地址的映射</p>
+<ul>
+<li>虚拟页号 (高位)</li>
+<li>偏移量 (低位)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h2><ul>
+<li><p>当发生缺页中断时，操作系统必须存中选择一个页面将其换出内存以腾出空间</p>
+</li>
+<li><p>NRU (最近未使用)</p>
+<ul>
+<li>LRU 的近似</li>
+</ul>
+</li>
+<li><p>FIFO (先进先出)</p>
+<ul>
+<li>可能抛弃重要页面</li>
+</ul>
+</li>
+<li><p>时钟算法</p>
+<ul>
+<li>现实的</li>
+</ul>
+</li>
+<li><p>LRU (最近最少使用)</p>
+<ul>
+<li>优秀但难实现</li>
+</ul>
+</li>
+<li><p>NFU (最不经常使用)</p>
+<ul>
+<li>LRU 的近似</li>
+</ul>
+</li>
+</ul>
+
+            </div>
         </div>
-        <!-- 文章列表   end -->
-        <!-- Main 主要部分 end -->
-        <!-- footer  页码 start-->
-        <footer style="text-align: center; padding-top: 2em;">
-  
-</footer>
-        <!-- footer  页码 end-->
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -201,10 +247,7 @@
                 All content copyright Tsung Han Tsai © 2018 • All rights reserved
             </ul>
         </div>
-        <!-- Copyright 版权 end -->
     </div>
-    <!-- Wrapper 外包 e-->
-    <!-- Scripts -->
 </body>
 
  	
