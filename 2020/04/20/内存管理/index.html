@@ -165,15 +165,9 @@
 </li>
 <li><p>内存超载</p>
 <ul>
-<li><p>交换技术</p>
-<ul>
-<li>把一个进程完整调入内存，使该进程运行一段间，然后把它存回磁盘，以释放内存</li>
-</ul>
+<li><p>交换技术: 把一个进程完整调入内存，使该进程运行一段间，然后把它存回磁盘，以释放内存</p>
 </li>
-<li><p>虚拟内存</p>
-<ul>
-<li>使程序在只有一部份被调入内存的情况下运行</li>
-</ul>
+<li><p>虚拟内存: 使程序在只有一部份被调入内存的情况下运行</p>
 </li>
 </ul>
 </li>
@@ -184,12 +178,13 @@
 </ul>
 </li>
 </ul>
-<h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><ul>
+<h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><p><strong>分页存储管理</strong></p>
+<ul>
 <li><p>每个程序都有自己的地址空间，这个空间被分割成多个块，每个块称作页或页面 (page)，有连续地址范围</p>
 </li>
 <li><p>本质上是用来创造一个地址空间，是对物理内存的抽象 (类似进程是对 CPU 的抽象)</p>
 </li>
-<li><p>虚拟内存的实现，是将虚拟地址空间分解成页，并将每一页映射到物理内存的某个页匡或者解除映射</p>
+<li><p>虚拟内存的实现，是将虚拟地址空间分解成页，并将每一页映射到物理内存的某个页框 (page frame) 或者解除映射</p>
 </li>
 <li><p>部份页被映射到物理内存</p>
 <ul>
@@ -197,14 +192,67 @@
 <li>程序引用到不在物理内存中的地址空间，由操作系统负责将缺失的部份装入物理内存并重新执行</li>
 </ul>
 </li>
-<li><p>页表</p>
+<li><p>相对於分段，分页允许记忆体储存於不连续的区块以维持档案系统的整齐</p>
+</li>
+</ul>
+<p><strong>分段存储管理</strong></p>
 <ul>
-<li><p>虚拟地址到物理地址的映射</p>
+<li>存在一个程序中变量的数量远比其他部份的数量多时的情况，导致地址空间中分给符号表的块可能会被装满，但这时其他表中可能还有大量的空间，需要一种能令程序员不用管理表扩张和收缩的方法</li>
+<li>提供多个互相独立的称为段 (segment) 的地址空间，每个段由一个从0到最大的线性地址序列构成，其长度可以在运行其间动态改变</li>
+<li>由于每个段都构成了一个独立的地址空间，所以他们可以独立地增长或减小而不会影响到其他的段。如果一个在某个段中的堆栈需要更多的空间，他就可以立刻得到所需要的空间，因为他的地址空间中没有任何其他东西阻挡他增长</li>
+<li>要在这种分段或二维的存储器中只是一个地址，程序必须提供两部份地址，一个段号和一个段内地址</li>
+<li>分段有助于在几个进程之间共享过程和数据</li>
+</ul>
+<p><strong>分段与分页的比较</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">考察点</th>
+<th align="center">分页</th>
+<th align="center">分段</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">需要程序员了解正在使用这种技术吗</td>
+<td align="center">否</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">存在多少线性地址空间</td>
+<td align="center">1</td>
+<td align="center">许多</td>
+</tr>
+<tr>
+<td align="center">整个地址空间可以超出物理存储器的大小吗</td>
+<td align="center">是</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">过程和数据可以被区分并分别被保护吗</td>
+<td align="center">否</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">其大小浮动的表可以很容易提供吗</td>
+<td align="center">否</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">用户间过程的共享方便吗</td>
+<td align="center">否</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">为什么发明这种技术</td>
+<td align="center">为了得到大的线性地址空间而不必购买更大的物理存储器</td>
+<td align="center">为了使程序和数据可以被划分为逻辑上独立的地址空间并且有助于共享和保护</td>
+</tr>
+</tbody></table>
+<p><strong>页表</strong></p>
 <ul>
+<li>虚拟地址到物理地址的映射<ul>
 <li>虚拟页号 (高位)</li>
 <li>偏移量 (低位)</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
