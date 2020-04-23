@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/me.jpg">
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="java, computer science, programming">
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            	<a href="#s1">Category</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Algorithms/">Algorithms</a></li><li><a class="category-link" href="/categories/IoTDB/">IoTDB</a></li><li><a class="category-link" href="/categories/LeetCode/">LeetCode</a></li><li><a class="category-link" href="/categories/Operating-System/">Operating System</a></li><li><a class="category-link" href="/categories/Other/">Other</a>
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tag/" title="Tag">
+		                Tag
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/about/" title="About">
+		                About
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+					<li class="translate-style">
+						<a id="translateButtonObject" href="javascript:translatePage();">繁&#8644;简</a>
+					</li>
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="linkedin" href="https://www.linkedin.com/in/tsung-han-jack-tsai-62696314b" target="_blank" rel="noopener">
+                            <i class="icon fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+			<script type="text/javascript" src="/js/tw_cn.js"></script>
+			<script type="text/javascript">
+				var defaultEncoding = 2; //網站編寫字體是否繁體，1-繁體，2-簡體
+				var translateDelay = 0; //延遲時間,若不在前, 要設定延遲翻譯時間, 如100表示100ms,默認為0
+				var cookieDomain = "https://jack870131.github.io/"; //Cookie地址, 一定要設定, 通常為你的網址
+				var translateButtonId = "translateLink"; //默認互換id
+				translateInitilization();
+			</script>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://i.imgur.com/YFDq3rc.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>内存管理</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><h2 id="地址空间"><a href="#地址空间" class="headerlink" title="地址空间"></a>地址空间</h2><ul>
+<li><p>抽象的内存，可用于寻址内存的地址集合</p>
+</li>
+<li><p>每个进程都有自己的地址空间，并且独立于其他进程的地址空间</p>
+</li>
+<li><p>地址动态重定位</p>
+<ul>
+<li>基址寄存器与界限寄存器</li>
+<li>每个内存地址在送到内存之前，都会自动先加上基址寄存器的内容</li>
+</ul>
+</li>
+<li><p>内存超载</p>
+<ul>
+<li><p>交换技术: 把一个进程完整调入内存，使该进程运行一段间，然后把它存回磁盘，以释放内存</p>
+</li>
+<li><p>虚拟内存: 使程序在只有一部份被调入内存的情况下运行</p>
+</li>
+</ul>
+</li>
+<li><p>空闲内存管理</p>
+<ul>
+<li>位图</li>
+<li>空闲区链表</li>
+</ul>
+</li>
+</ul>
+<h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><p><strong>分页存储管理</strong></p>
+<ul>
+<li><p>每个程序都有自己的地址空间，这个空间被分割成多个块，每个块称作页或页面 (page)，有连续地址范围</p>
+</li>
+<li><p>本质上是用来创造一个地址空间，是对物理内存的抽象 (类似进程是对 CPU 的抽象)</p>
+</li>
+<li><p>虚拟内存的实现，是将虚拟地址空间分解成页，并将每一页映射到物理内存的某个页框 (page frame) 或者解除映射</p>
+</li>
+<li><p>部份页被映射到物理内存</p>
+<ul>
+<li>程序引用到在物理内存中的地址空间，由硬件立刻执行必要的映射</li>
+<li>程序引用到不在物理内存中的地址空间，由操作系统负责将缺失的部份装入物理内存并重新执行</li>
+</ul>
+</li>
+<li><p>相对於分段，分页允许记忆体储存於不连续的区块以维持档案系统的整齐</p>
+</li>
+</ul>
+<p><strong>分段存储管理</strong></p>
+<ul>
+<li>存在一个程序中变量的数量远比其他部份的数量多时的情况，导致地址空间中分给符号表的块可能会被装满，但这时其他表中可能还有大量的空间，需要一种能令程序员不用管理表扩张和收缩的方法</li>
+<li>提供多个互相独立的称为段 (segment) 的地址空间，每个段由一个从0到最大的线性地址序列构成，其长度可以在运行其间动态改变</li>
+<li>由于每个段都构成了一个独立的地址空间，所以他们可以独立地增长或减小而不会影响到其他的段。如果一个在某个段中的堆栈需要更多的空间，他就可以立刻得到所需要的空间，因为他的地址空间中没有任何其他东西阻挡他增长</li>
+<li>要在这种分段或二维的存储器中只是一个地址，程序必须提供两部份地址，一个段号和一个段内地址</li>
+<li>分段有助于在几个进程之间共享过程和数据</li>
+</ul>
+<p><strong>分段与分页的比较</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">考察点</th>
+<th align="center">分页</th>
+<th align="center">分段</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">需要程序员了解正在使用这种技术吗</td>
+<td align="center">否</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">存在多少线性地址空间</td>
+<td align="center">1</td>
+<td align="center">许多</td>
+</tr>
+<tr>
+<td align="center">整个地址空间可以超出物理存储器的大小吗</td>
+<td align="center">是</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">过程和数据可以被区分并分别被保护吗</td>
+<td align="center">否</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">其大小浮动的表可以很容易提供吗</td>
+<td align="center">否</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">用户间过程的共享方便吗</td>
+<td align="center">否</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">为什么发明这种技术</td>
+<td align="center">为了得到大的线性地址空间而不必购买更大的物理存储器</td>
+<td align="center">为了使程序和数据可以被划分为逻辑上独立的地址空间并且有助于共享和保护</td>
+</tr>
+</tbody></table>
+<p><strong>页表</strong></p>
+<ul>
+<li>虚拟地址到物理地址的映射<ul>
+<li>虚拟页号 (高位)</li>
+<li>偏移量 (低位)</li>
+</ul>
+</li>
+</ul>
+<h2 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h2><ul>
+<li><p>当发生缺页中断时，操作系统必须存中选择一个页面将其换出内存以腾出空间</p>
+</li>
+<li><p>NRU (最近未使用)</p>
+<ul>
+<li>LRU 的近似</li>
+</ul>
+</li>
+<li><p>FIFO (先进先出)</p>
+<ul>
+<li>可能抛弃重要页面</li>
+</ul>
+</li>
+<li><p>时钟算法</p>
+<ul>
+<li>现实的</li>
+</ul>
+</li>
+<li><p>LRU (最近最少使用)</p>
+<ul>
+<li>优秀但难实现</li>
+</ul>
+</li>
+<li><p>NFU (最不经常使用)</p>
+<ul>
+<li>LRU 的近似</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+        </div>
+    </div>
+</body>
+
+ 	
+</html>

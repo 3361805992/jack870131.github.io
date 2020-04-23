@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<link rel="bookmark" type="image/x-icon" href="/img/me.jpg">
+	<link rel="shortcut icon" href="/img/me.jpg">
+	
+			    <title>
+    Jack's Blog
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/css/mic_main.css">
+    <link rel="stylesheet" href="/css/dropdownMenu.css">
+    <meta name="keywords" content="java, computer science, programming">
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css">
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JACK</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special">
+            <ul class="menu links">
+			<!-- Homepage  主页  --> 
+			<li>
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            	<a href="#s1">Category</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Algorithms/">Algorithms</a></li><li><a class="category-link" href="/categories/IoTDB/">IoTDB</a></li><li><a class="category-link" href="/categories/LeetCode/">LeetCode</a></li><li><a class="category-link" href="/categories/Operating-System/">Operating System</a></li><li><a class="category-link" href="/categories/Other/">Other</a>
+	                    </li></ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/tag/" title="Tag">
+		                Tag
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/about/" title="About">
+		                About
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+					<li class="translate-style">
+						<a id="translateButtonObject" href="javascript:translatePage();">繁&#8644;简</a>
+					</li>
+                    
+                    <li>
+                        <a title="github" href="https://github.com/jack870131" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="linkedin" href="https://www.linkedin.com/in/tsung-han-jack-tsai-62696314b" target="_blank" rel="noopener">
+                            <i class="icon fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+			<script type="text/javascript" src="/js/tw_cn.js"></script>
+			<script type="text/javascript">
+				var defaultEncoding = 2; //網站編寫字體是否繁體，1-繁體，2-簡體
+				var translateDelay = 0; //延遲時間,若不在前, 要設定延遲翻譯時間, 如100表示100ms,默認為0
+				var cookieDomain = "https://jack870131.github.io/"; //Cookie地址, 一定要設定, 通常為你的網址
+				var translateButtonId = "translateLink"; //默認互換id
+				translateInitilization();
+			</script>
+</nav>
+
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://i.imgur.com/DwPi6cm.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>批量写接口设计</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="批量写接口设计"><a href="#批量写接口设计" class="headerlink" title="批量写接口设计"></a>批量写接口设计</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><p>IoTDB原先的写入接口为基于单个时间戳构建单个TSRecord并写入，此方法的优点在于可以支持非对齐的数据写入，但因为底层存储方式的问题，这将会限制用户在写入大量对齐数据时的效率。</p>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>本功能的开发意图: 用户写入数据时，能够基于列(传感器 sensor)批量写入多行数据，而非基于时间戳一次写入一行数据。</p>
+<p><img src="https://i.imgur.com/oET3ZBU.png" alt></p>
+<h2 id="功能设计"><a href="#功能设计" class="headerlink" title="功能设计"></a>功能设计</h2><h3 id="需求说明"><a href="#需求说明" class="headerlink" title="需求说明"></a>需求说明</h3><p>根据用户指定的数据量，将数据批量(多行)写入指定的传感器中。</p>
+<h3 id="用户操作方式"><a href="#用户操作方式" class="headerlink" title="用户操作方式"></a>用户操作方式</h3><ol>
+<li><p>新建一个 TSFileWriter，并将所需的 schema 整理成一数组，向 TsFileWriter 注册。示例如下:</p>
+<pre class=" language-java"><code class="language-java">File file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span><span class="token string">"test.ts"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>file<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  file<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+TSFileWriter tsFileWriter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TSFileWriter</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> sensorNum <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> sensorNum<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  fileSchema<span class="token punctuation">.</span><span class="token function">registerMeasurement</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">MeasurementSchema</span><span class="token punctuation">(</span><span class="token string">"sensor_"</span> <span class="token operator">+</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> TSDataType<span class="token punctuation">.</span>INT64<span class="token punctuation">,</span> TSEncoding<span class="token punctuation">.</span>TS_2DIFF<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span>MeasurementSchema measurement <span class="token operator">:</span> fileSchema<span class="token punctuation">.</span><span class="token function">getMeasurementSchemaList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  tsFileWriter<span class="token punctuation">.</span><span class="token function">addMeasurement</span><span class="token punctuation">(</span>measurement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+<li><p>定义批量写入所需的数据量，并且与所要写入的设备名称以及 schema 数组一同传入 RowBatch 对象，这将会根据各个传感器所支持的数据类型(包括时间戳)在底层新建对应的数组，示例如下:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> rowNum <span class="token operator">=</span> <span class="token number">10000000</span><span class="token punctuation">;</span>
+
+RowBatch rowBatch <span class="token operator">=</span> fileSchema<span class="token punctuation">.</span><span class="token function">createRowBatch</span><span class="token punctuation">(</span><span class="token string">"device_1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+</li>
+<li><p>向 RowBatch 底层的对应数组传入每一个传感器所需写入的值(用户需按行构建，每行一 timestamp, 数个 value)，当达到 RowBatch 预设的大小时，进行写入操作，并重置 RowBatch。重复以上动作直到所有数据都已写入。示例如下:</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">long</span><span class="token punctuation">[</span><span class="token punctuation">]</span> timestamps <span class="token operator">=</span> rowBatch<span class="token punctuation">.</span>timestamps<span class="token punctuation">;</span>
+<span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> sensor1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> rowBatch<span class="token punctuation">.</span>sensors<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span><span class="token punctuation">[</span><span class="token punctuation">]</span> sensor2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> rowBatch<span class="token punctuation">.</span>sensors<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">double</span><span class="token punctuation">[</span><span class="token punctuation">]</span> sensor3 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> rowBatch<span class="token punctuation">.</span>sensors<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">long</span> timestamp <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> value1 <span class="token operator">=</span> <span class="token number">10000000</span><span class="token punctuation">;</span>
+<span class="token keyword">long</span> value2 <span class="token operator">=</span> 10000000L<span class="token punctuation">;</span>
+<span class="token keyword">double</span> value3 <span class="token operator">=</span> <span class="token number">10000000.0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> r <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> r <span class="token operator">&lt;</span> rowNum<span class="token punctuation">;</span> r<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> row <span class="token operator">=</span> rowBatch<span class="token punctuation">.</span>size<span class="token operator">++</span><span class="token punctuation">;</span>
+  timestamps<span class="token punctuation">[</span>row<span class="token punctuation">]</span> <span class="token operator">=</span> timestamp<span class="token operator">++</span><span class="token punctuation">;</span>
+  sensor1<span class="token punctuation">[</span>row<span class="token punctuation">]</span> <span class="token operator">=</span> value1<span class="token operator">++</span><span class="token punctuation">;</span>
+  sensor2<span class="token punctuation">[</span>row<span class="token punctuation">]</span> <span class="token operator">=</span> value2<span class="token operator">++</span><span class="token punctuation">;</span>
+  sensor3<span class="token punctuation">[</span>row<span class="token punctuation">]</span> <span class="token operator">=</span> value3<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// If the batch is full, write it out and start over</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>rowBatch<span class="token punctuation">.</span>size <span class="token operator">==</span> rowBatch<span class="token punctuation">.</span><span class="token function">getMaxSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    tsFileWriter<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>rowBatch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rowBatch<span class="token punctuation">.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>rowBatch<span class="token punctuation">.</span>size <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  tsFileWriter<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>rowBatch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  rowBatch<span class="token punctuation">.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+</ol>
+<h3 id="技术方案"><a href="#技术方案" class="headerlink" title="技术方案"></a>技术方案</h3><ol>
+<li><p>替换数据结构</p>
+<p>原本 TSRecord 中使用 ArrayList 构造需要传入多个传感器的数据，也就是使用 ArrayList 按行(时间戳)存储。这将会使用户能够写入非对齐的数据。</p>
+<p>在批量写接口中，面向的是写入对齐的数据，因此调整了存储方案，更改为按列(传感器)存储。这将使用整型数组作为构造数据的主要数据结构，因为对单个传感器传入数据时，数据类型是固定的，且整型数组对空间和写入效率上相对比较友好。</p>
+</li>
+<li><p>RowBatch 类设计</p>
+<p><img src="https://i.imgur.com/B2l8HCE.png" alt></p>
+</li>
+</ol>
+
+            </div>
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li><br>
+                All content copyright Tsung Han Tsai © 2018 • All rights reserved
+            </ul>
+        </div>
+    </div>
+</body>
+
+ 	
+</html>
