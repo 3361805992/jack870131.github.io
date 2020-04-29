@@ -152,29 +152,23 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h1><p><img src="https://i.imgur.com/Dm3Nj07.png" alt="Mind Map"></p>
-<h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><h3 id="进程模型"><a href="#进程模型" class="headerlink" title="进程模型"></a>进程模型</h3><p><strong>进程切换</strong></p>
-<ul>
+                <h1 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h1><h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><h3 id="进程切换"><a href="#进程切换" class="headerlink" title="进程切换"></a>进程切换</h3><ul>
 <li>单个 CPU 可以被若干进程共享</li>
 <li>单个 CPU 一次只能运行一个进程</li>
 </ul>
-<p><strong>进程与程序区别</strong></p>
-<ul>
+<h3 id="进程与程序区别"><a href="#进程与程序区别" class="headerlink" title="进程与程序区别"></a>进程与程序区别</h3><ul>
 <li>程序(适当形式描述的算法): 食谱 </li>
 <li>CPU 处理器: 厨师</li>
 <li>输入数据: 食材</li>
 <li>进程: 厨师阅读食谱，取食材以及烘焙等动作的总和</li>
 </ul>
-<p><strong>进程调度</strong></p>
-<ol>
+<h3 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h3><ol>
 <li>保存当前进程状态</li>
 <li>切换到高优先级进程(每个进程拥有各自程序)</li>
 <li>切换回原本进程(从原本进度开始执行)</li>
 </ol>
-<p><strong>进程的层次结构</strong></p>
-<p>进程只有一个父进程(但可以有零或多个子进程)</p>
-<h3 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h3><p><strong>导致进程创建</strong></p>
-<ol>
+<h3 id="进程的层次结构"><a href="#进程的层次结构" class="headerlink" title="进程的层次结构"></a>进程的层次结构</h3><p>进程只有一个父进程(但可以有零或多个子进程)</p>
+<h3 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h3><ol>
 <li><p>系统初始化</p>
 </li>
 <li><p>正在运行的程序执行创建进程的系统调用</p>
@@ -184,32 +178,27 @@
 <li><p>一个批处理作业的初始化</p>
 </li>
 </ol>
-<h3 id="进程的终止"><a href="#进程的终止" class="headerlink" title="进程的终止"></a>进程的终止</h3><p><strong>导致进程终止</strong></p>
-<ul>
+<h3 id="进程的终止"><a href="#进程的终止" class="headerlink" title="进程的终止"></a>进程的终止</h3><ul>
 <li>正常退出(自愿)</li>
 <li>出错退出(自愿)</li>
 <li>严重错误(非自愿)</li>
 <li>被其他进程杀死(非自愿)</li>
 </ul>
-<h3 id="进程的状态"><a href="#进程的状态" class="headerlink" title="进程的状态"></a>进程的状态</h3><p><strong>五种状态</strong></p>
-<ul>
+<h3 id="进程的状态"><a href="#进程的状态" class="headerlink" title="进程的状态"></a>进程的状态</h3><ul>
 <li>创建态 (new): 进程正在被创建</li>
 <li>就绪态 (ready): 可运行，但因位其他进程正在运行而战时终止</li>
 <li>运行态 (running): 进程实际占用 CPU</li>
 <li>阻塞态 (waiting): 除非某外部事件发生，否则进程不能运行</li>
 <li>结束态 (terminated): 进程正在从系统上消失</li>
 </ul>
-<p><strong>状态切换</strong></p>
-<ul>
+<h3 id="状态切换"><a href="#状态切换" class="headerlink" title="状态切换"></a>状态切换</h3><ul>
 <li>运行 -&gt; 阻塞: 进程因为等待输入而被阻塞</li>
 <li>运行 -&gt; 就绪: 调度程序选择另一进程</li>
 <li>就绪 -&gt; 运行: 调度程序选择该进程</li>
 <li>阻塞 -&gt; 就绪: 出现有效输入</li>
 </ul>
-<h3 id="进程的实现"><a href="#进程的实现" class="headerlink" title="进程的实现"></a>进程的实现</h3><p><strong>进程表</strong></p>
-<p>保存进程状态的重要信息以及状态转换时需要保存的信息</p>
-<p><strong>中断</strong></p>
-<ol>
+<h3 id="进程的实现"><a href="#进程的实现" class="headerlink" title="进程的实现"></a>进程的实现</h3><h3 id="进程表"><a href="#进程表" class="headerlink" title="进程表"></a>进程表</h3><p>保存进程状态的重要信息以及状态转换时需要保存的信息</p>
+<h3 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h3><ol>
 <li><p>硬件压入堆栈程序计数器等</p>
 </li>
 <li><p>硬件从中断向量装入新的程序技术器</p>
@@ -227,39 +216,31 @@
 <li><p>汇编语言过程开始运行新的当前进程</p>
 </li>
 </ol>
-<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><h3 id="线程模型"><a href="#线程模型" class="headerlink" title="线程模型"></a>线程模型</h3><p><strong>进程与线程</strong></p>
-<ul>
+<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><h3 id="进程与线程-1"><a href="#进程与线程-1" class="headerlink" title="进程与线程"></a>进程与线程</h3><ul>
 <li>进程: 把资源集中到一起</li>
 <li>线程: CPU 上被调度执行的实体</li>
 <li>一个进程环境中允许多个线程执行(轮流运行)，共享相同地址空间</li>
 </ul>
-<p><strong>线程之间没有保护</strong></p>
-<ul>
+<h3 id="线程之间没有保护"><a href="#线程之间没有保护" class="headerlink" title="线程之间没有保护"></a>线程之间没有保护</h3><ul>
 <li><p>线程可以对彼此进行读写</p>
 </li>
 <li><p>线程有各自的堆栈</p>
 </li>
 </ul>
-<p><strong>线程表</strong></p>
-<ul>
+<h3 id="线程表"><a href="#线程表" class="headerlink" title="线程表"></a>线程表</h3><ul>
 <li>程序计数器</li>
 <li>寄存器</li>
 <li>堆栈</li>
 <li>状态</li>
 </ul>
-<p><strong>线程状态</strong></p>
-<ul>
+<h3 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h3><ul>
 <li>运行: 拥有 CPU 并且是活跃的</li>
 <li>阻塞: 等待某个释放它的事件</li>
 <li>就绪: 可以被调度执行</li>
 <li>终止: 不可被调度执行</li>
 </ul>
-<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h2><p><strong>竞争条件</strong></p>
-<ul>
-<li>两个或多个进程读写某些共享数据</li>
-</ul>
-<p><strong>临界区</strong></p>
-<ul>
+<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h2><h3 id="竞争条件"><a href="#竞争条件" class="headerlink" title="竞争条件"></a>竞争条件</h3><p>两个或多个进程读写某些共享数据</p>
+<h3 id="临界区"><a href="#临界区" class="headerlink" title="临界区"></a>临界区</h3><ul>
 <li><p>对共享内存进行访问的程序片段</p>
 </li>
 <li><p>互斥</p>
@@ -276,8 +257,7 @@
 </ul>
 </li>
 </ul>
-<p><strong>实现互斥</strong></p>
-<ul>
+<h3 id="实现互斥"><a href="#实现互斥" class="headerlink" title="实现互斥"></a>实现互斥</h3><ul>
 <li><p>屏蔽中断: 每个进程在进入临界区后立即屏蔽所有中断，并在要离开之前再打开中断</p>
 </li>
 <li><p>锁变量: 根据锁的值判断临界区是否有进程</p>
@@ -298,10 +278,8 @@
 <li><p>TSL 指令</p>
 </li>
 </ul>
-<h3 id="睡眠与唤醒"><a href="#睡眠与唤醒" class="headerlink" title="睡眠与唤醒"></a>睡眠与唤醒</h3><p><strong>生产者 - 消费者问题</strong></p>
-<p>多个进程共享一个公共的固定大小的换冲区，当缓冲区已满，生产者或消费者还想继续操作时，即进入睡面状态，等待缓冲区出现空间并被唤醒</p>
-<p><strong>信号量</strong></p>
-<ul>
+<h3 id="生产者-消费者问题"><a href="#生产者-消费者问题" class="headerlink" title="生产者 - 消费者问题"></a>生产者 - 消费者问题</h3><p>多个进程共享一个公共的固定大小的换冲区，当缓冲区已满，生产者或消费者还想继续操作时，即进入睡面状态，等待缓冲区出现空间并被唤醒</p>
+<h3 id="信号量"><a href="#信号量" class="headerlink" title="信号量"></a>信号量</h3><ul>
 <li>它允许同一时刻多个线程访问同一资源，但是需要控制同一时刻访问此资源的最大线程数量。</li>
 <li>累计唤醒次数<ul>
 <li>等于0: 表示没有保存下来的唤醒操作</li>
@@ -309,8 +287,7 @@
 </ul>
 </li>
 </ul>
-<p><strong>互斥量</strong></p>
-<ul>
+<h3 id="互斥量"><a href="#互斥量" class="headerlink" title="互斥量"></a>互斥量</h3><ul>
 <li><p>采用互斥对象机制，只有拥有互斥对象的线程才有访问公共资源的权限。因为互斥对象只有一个，所以可以保证公共资源不会被多个线程同时访问</p>
 </li>
 <li><p>处于两态之一的变量</p>
@@ -320,15 +297,13 @@
 </ul>
 </li>
 </ul>
-<h2 id="调度"><a href="#调度" class="headerlink" title="调度"></a>调度</h2><p><strong>进程行为</strong></p>
-<ul>
+<h2 id="调度"><a href="#调度" class="headerlink" title="调度"></a>调度</h2><h3 id="进程行为"><a href="#进程行为" class="headerlink" title="进程行为"></a>进程行为</h3><ul>
 <li><p>计算密集型进程: 较长时间的 CPU 集中使用和较小频度的 I/O 等待</p>
 </li>
 <li><p>I/O 密集型进程: I/O 密集型进程具有较短时间的 CPU 集中使用和频繁的 I/O 等待</p>
 </li>
 </ul>
-<p><strong>何时调度</strong></p>
-<ul>
+<h3 id="何时调度"><a href="#何时调度" class="headerlink" title="何时调度"></a>何时调度</h3><ul>
 <li><p>在创建一个新进程之后，需要决定是运行父进程还是子进程</p>
 </li>
 <li><p>在一个进程退出时必须做出调度决策</p>
@@ -346,33 +321,41 @@
 </ul>
 </li>
 </ul>
-<h3 id="调度算法分类"><a href="#调度算法分类" class="headerlink" title="调度算法分类"></a>调度算法分类</h3><p><strong>批处理</strong></p>
-<p>非抢占式算法 or 长时间周期的抢占式算法多</p>
-<p><strong>交互式</strong></p>
-<p>抢占式算法多</p>
-<p><strong>实时</strong></p>
-<p>非抢占式算法多</p>
-<h3 id="调度算法目标"><a href="#调度算法目标" class="headerlink" title="调度算法目标"></a>调度算法目标</h3><p><strong>所有系统</strong></p>
+<h3 id="调度算法分类"><a href="#调度算法分类" class="headerlink" title="调度算法分类"></a>调度算法分类</h3><ul>
+<li><p>批处理<br>非抢占式算法 or 长时间周期的抢占式算法多</p>
+</li>
+<li><p>交互式<br>抢占式算法多</p>
+</li>
+<li><p>实时<br>非抢占式算法多</p>
+</li>
+</ul>
+<h3 id="调度算法目标"><a href="#调度算法目标" class="headerlink" title="调度算法目标"></a>调度算法目标</h3><ul>
+<li><p>所有系统</p>
 <ul>
 <li>公平</li>
 <li>策略强制执行</li>
 <li>平衡</li>
 </ul>
-<p><strong>批处理系统</strong></p>
+</li>
+<li><p>批处理系统</p>
 <ul>
 <li>吞吐量</li>
 <li>周转时间</li>
 <li>CPU 利用率</li>
 </ul>
-<p><strong>交互式系统</strong></p>
+</li>
+<li><p>交互式系统</p>
 <ul>
 <li>响应时间</li>
 <li>均衡性</li>
 </ul>
-<p><strong>实时系统</strong></p>
+</li>
+<li><p>实时系统</p>
 <ul>
 <li>满足截止时间</li>
 <li>可预测性</li>
+</ul>
+</li>
 </ul>
 
             </div>
