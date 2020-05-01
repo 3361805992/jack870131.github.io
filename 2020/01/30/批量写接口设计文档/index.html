@@ -151,7 +151,7 @@
                 <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>批量写接口设计</h2></a>
             </div>
             <!-- Post -->
-            <div class="typo" style="padding: 3rem;">
+            <div class="typo" style="padding: 4rem;">
                 <h1 id="批量写接口设计"><a href="#批量写接口设计" class="headerlink" title="批量写接口设计"></a>批量写接口设计</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h3><p>IoTDB原先的写入接口为基于单个时间戳构建单个TSRecord并写入，此方法的优点在于可以支持非对齐的数据写入，但因为底层存储方式的问题，这将会限制用户在写入大量对齐数据时的效率。</p>
 <h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>本功能的开发意图: 用户写入数据时，能够基于列(传感器 sensor)批量写入多行数据，而非基于时间戳一次写入一行数据。</p>
 <p><img src="https://i.imgur.com/oET3ZBU.png" alt></p>
