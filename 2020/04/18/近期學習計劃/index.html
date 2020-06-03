@@ -62,25 +62,24 @@
 	
 <link rel="stylesheet" href="/css/prism-okaidia.css" type="text/css"></head>
     
-		<body class="is-loading">
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_okaidia.css">
+<link rel="stylesheet" href="/css/typo.css">
+<!-- 文章页 -->
+<body class="is-loading">
     <!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in overlay">
+    <div id="wrapper" class="fade-in">
         <!-- Intro 头部显示 s -->
-                <div id="intro">
-            <h1>This is<br>
-                        Jack</h1>
-            <p> Think big <br> Start small, grow fast
-            </p>
-            <ul class="actions">
-                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-            </ul>
-        </div>
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
     <a href="/" class="logo">JACK</a>
 </header>
-        <!-- Header 头部logo end -->
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special">
             <ul class="menu links">
@@ -146,54 +145,99 @@
 				translateInitilization();
 			</script>
 </nav>
-        <!-- Nav 导航条 end -->
-        <!-- Main 主要部分 start -->
-        
-        <!-- 文章列表   s -->
-        <div id="main" style="background-color: transparent; padding:0;">
-        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
-            <div class="link_row">
-                <!-- 文章sample  s-->
 
-                
-                <div class="6u 12u(narrower)">
-                    <section class="link_box special">
-                       <a href="/2020/04/19/進程與線程/">
-                        <div class="page_title" style="background-image: url(https://i.imgur.com/YFDq3rc.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
-                            <!--标题-->
-                            <h2 class="page_title_text"> 進程與線程 </h2>
-                            <!--段落-->
-                        </div>
-                        </a>
-                        <div class="home-post-info">
-                            <!-- Author Avatar -->
-                            <div class="home-post-info-author-avatar">
-                                <h6><span class="home-post-info-data">2020-04-19</span></h6>
-                                <div class="home-post-info-Category">
-                                    <!-- Category -->
-                                    <span>
-                            <h6>
-                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/">
-                                <a class="post_category-link" href="/categories/Operating-System/">Operating System</a></a>
-                            </h6>
-                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!-- 文章sample  e-->
-            
+        <div id="main">
+            <div class="post_page_title_img" style="height: 25rem;background-image: url(https://i.imgur.com/V1AC4YY.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>近期學習計劃</h2></a>
             </div>
-        </section>
+            <!-- Post -->
+            <div class="typo" style="padding: 4rem;">
+                <h1 id="近期學習計劃"><a href="#近期學習計劃" class="headerlink" title="近期學習計劃"></a>近期學習計劃</h1><h2 id="Java-核心知識"><a href="#Java-核心知識" class="headerlink" title="Java 核心知識"></a>Java 核心知識</h2><ol>
+<li>Java 並發編程的藝術<ul>
+<li>極客時間: Java 並發編程實戰</li>
+</ul>
+</li>
+<li>深入理解 Java 虛擬機<ul>
+<li>極客時間: 深入拆解 Java 虛擬機</li>
+</ul>
+</li>
+<li>JDK 源碼<ul>
+<li>慕課網: 面試官系統精講 Java 源碼及大廠真題</li>
+</ul>
+</li>
+<li>Spring 源碼<ul>
+<li>死磕 Spring</li>
+</ul>
+</li>
+<li>Effective Java</li>
+<li>On Java 8</li>
+</ol>
+<h2 id="操作系統"><a href="#操作系統" class="headerlink" title="操作系統"></a>操作系統</h2><ol>
+<li>現代操作系統<ul>
+<li>極客時間: 趣談 Linux 操作系統</li>
+</ul>
+</li>
+</ol>
+<h2 id="計算機網絡"><a href="#計算機網絡" class="headerlink" title="計算機網絡"></a>計算機網絡</h2><ol>
+<li>計算機網絡: 自頂向下方法</li>
+<li>圖解 tcp ip</li>
+<li>極客時間: 趣談網絡協議</li>
+</ol>
+<h2 id="算法與數據結構"><a href="#算法與數據結構" class="headerlink" title="算法與數據結構"></a>算法與數據結構</h2><ol>
+<li>Fucking Algorithms</li>
+<li>極客時間: 數據結構與算法之美</li>
+<li>算法導論</li>
+</ol>
+<h2 id="數據庫"><a href="#數據庫" class="headerlink" title="數據庫"></a>數據庫</h2><ol>
+<li>數據庫系統概念</li>
+<li>redis 設計與實現</li>
+<li>MySQL 技術內幕</li>
+</ol>
+<h2 id="項目源碼"><a href="#項目源碼" class="headerlink" title="項目源碼"></a>項目源碼</h2><ol>
+<li>Apache RocketMQ<ul>
+<li>RocketMQ 技術內幕</li>
+</ul>
+</li>
+<li>Apache IoTDB<ul>
+<li>開源中國 IoTDB 博客</li>
+</ul>
+</li>
+<li>Elasticsearch<ul>
+<li>Elasticsearch 源碼解析與優化實戰</li>
+</ul>
+</li>
+</ol>
+<h2 id="計算機組成原理"><a href="#計算機組成原理" class="headerlink" title="計算機組成原理"></a>計算機組成原理</h2><ol>
+<li>編碼</li>
+<li>極客時間: 深入淺出計算機組成原理</li>
+<li>深入理解計算機系統</li>
+</ol>
+<h2 id="設計模式"><a href="#設計模式" class="headerlink" title="設計模式"></a>設計模式</h2><ol>
+<li>設計模式之禅</li>
+<li>極客時間: 設計模式之美</li>
+</ol>
+<h2 id="分布式系統"><a href="#分布式系統" class="headerlink" title="分布式系統"></a>分布式系統</h2><ol>
+<li>分布式系統概念與設計</li>
+<li>極客時間: 分布式技術原理與算法解析</li>
+<li>極客時間: RPC實戰與核心原理</li>
+<li>慕課網: 分布式技術面試大廠真題</li>
+</ol>
+<h2 id="學習順序"><a href="#學習順序" class="headerlink" title="學習順序"></a>學習順序</h2><ol>
+<li>現代操作系統 (配合極客時間專欄)</li>
+<li>Fucking Algorithms (配合極客時間專欄 &amp; Leetcode)</li>
+<li>Java 並發編程的藝術 (配合極客時間專欄)</li>
+<li>深入理解 Java 虛擬機 (配合極客時間專欄)</li>
+<li>JDK 源碼 (配合慕課網專欄 &amp; 死磕系列博客)</li>
+<li>Spring 源碼 (配合死磕系列博客)</li>
+<li>數據庫系統概念 (配合 Redis 設計與實現 &amp; MySQL 技術內幕)</li>
+<li>計算機網絡: 自頂向下方法 (配合極客時間專欄 &amp; 圖解 tcp ip)</li>
+<li>設計模式之禅 (配合極客時間專欄)</li>
+<li>分布式系統概念與設計 (配合極客時間專欄)</li>
+<li>Java 面試題庫</li>
+</ol>
+
+            </div>
         </div>
-        <!-- 文章列表   end -->
-        <!-- Main 主要部分 end -->
-        <!-- footer  页码 start-->
-        <footer style="text-align: center; padding-top: 2em;">
-  
-</footer>
-        <!-- footer  页码 end-->
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -201,10 +245,7 @@
                 All content copyright Tsung Han Tsai © 2018 • All rights reserved
             </ul>
         </div>
-        <!-- Copyright 版权 end -->
     </div>
-    <!-- Wrapper 外包 e-->
-    <!-- Scripts -->
 </body>
 
  	
